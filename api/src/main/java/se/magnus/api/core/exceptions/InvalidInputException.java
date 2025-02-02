@@ -1,0 +1,12 @@
+package se.magnus.api.core.exceptions;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+@AllArgsConstructor
+public class InvalidInputException extends RuntimeException {
+    private String message;
+}
