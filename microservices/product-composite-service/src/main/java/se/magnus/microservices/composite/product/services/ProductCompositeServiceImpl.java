@@ -32,7 +32,7 @@ public class ProductCompositeServiceImpl implements ProductCompositeService {
             throw new NotFoundException("No product found for productId "+ productId);
         }
         final List<Recommendation> recommendationList =
-                productCompositeIntegration.getRecommendation(productId);
+                productCompositeIntegration.getRecommendations(productId);
         final List<Review> reviews = productCompositeIntegration.getReviews(productId);
         return createProductAggregate(product, recommendationList, reviews,
                 serviceUtil.getServiceAddress());

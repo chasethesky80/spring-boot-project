@@ -8,7 +8,7 @@ import java.util.List;
 public interface RecommendationService {
 
     @GetMapping(value="/recommendations", produces = "application/json")
-    List<Recommendation> getRecommendation(
+    List<Recommendation> getRecommendations(
             @RequestParam(value = "productId", required = true) int productId
     );
 }
